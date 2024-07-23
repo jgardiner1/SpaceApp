@@ -9,8 +9,8 @@
         Height="600" Width="920"
         ResizeMode="NoResize"
         Background="Transparent"
-        AllowsTransparency="True"
-        WindowStyle="None">
+        AllowsTransparency="False"
+        WindowStyle="SingleBorderWindow">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
@@ -26,6 +26,13 @@
                 <RowDefinition Height="75"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+
+            <Rectangle Grid.ColumnSpan="1"
+                       Grid.RowSpan="2">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="#191824"/>
+                </Rectangle.Fill>
+            </Rectangle>
 
             <TextBlock Text="SpaceApp"
                        VerticalAlignment="Center"
@@ -68,6 +75,19 @@
                             Grid.Column="1"
                             Margin="10"
                             Content="{Binding CurrentView}"/>
+
+            <Grid Name="BackgroundGrid"
+                  Grid.Row="0"
+                  Grid.ColumnSpan="2"
+                  Grid.RowSpan="2"
+                  IsHitTestVisible="False">
+                <Grid.Background>
+                    <ImageBrush ImageSource="{Binding BackgroundImageSource}"
+                           Stretch="Fill"
+                                Opacity="0.8"/>
+                </Grid.Background>
+
+            </Grid>
         </Grid>
     </Border>
 </Window>

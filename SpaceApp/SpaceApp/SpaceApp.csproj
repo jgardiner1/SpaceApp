@@ -131,8 +131,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fonts\" />
-    <Folder Include="Images\" />
     <Folder Include="MVVM\Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StarryNightSkyBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\10893418.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SpaceBackground1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

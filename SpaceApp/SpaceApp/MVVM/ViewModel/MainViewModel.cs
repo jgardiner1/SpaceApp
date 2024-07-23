@@ -1,7 +1,9 @@
 ﻿using SpaceApp.Core;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,6 +22,18 @@ namespace SpaceApp.MVVM.ViewModel
 
         private object _currentView;
 
+        private string _backgroundImageSource;
+
+        public string BackgroundImageSource
+        {
+            get { return _backgroundImageSource; }
+            set
+            {
+                _backgroundImageSource = value;
+                OnPropertyChanged();
+            }
+        }
+
         public object CurrentView
         {
             get { return _currentView; }
@@ -34,20 +48,24 @@ namespace SpaceApp.MVVM.ViewModel
             SessionsVM = new SessionsViewModel();
             EventsVM = new EventsViewModel();
             CurrentView = HomeVM;
+            BackgroundImageSource = "pack://application:,,,/Images/10893418.png";
 
             HomeViewCommand = new RelayCommand(o =>
             {
                 CurrentView = HomeVM;
+                BackgroundImageSource = "pack://application:,,,/Images/10893418.png";
             });
 
             SessionsViewCommand = new RelayCommand(o =>
             {
                 CurrentView = SessionsVM;
+                BackgroundImageSource = "pack://application:,,,/Images/10893418.png";
             });
 
             EventsViewCommand = new RelayCommand(o =>
             {
                 CurrentView = EventsVM;
+                BackgroundImageSource = "pack://application:,,,/Images/10893418.png";
             });
         }
     }

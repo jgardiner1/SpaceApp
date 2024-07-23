@@ -13,7 +13,6 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-
         <TextBlock Text="SPACE EVENTS"
                    Foreground="White"
                    FontSize="32"
