@@ -6,8 +6,9 @@
              xmlns:local="clr-namespace:SpaceApp.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <Grid Background="Transparent">
         <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -15,10 +16,22 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Text="SESSIONS"
-                   Foreground="White"
+                   Foreground="white"
                    FontSize="32"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Center"/>
+                   HorizontalAlignment="Left"
+                   Margin="20, 0, 0, 0"/>
+
+        <ListView Grid.Row="1" ItemsSource="{Binding Sessions}"
+                  Background="Transparent"
+                  BorderThickness="0"
+                  ItemContainerStyle="{StaticResource SessionCard}">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+        </ListView>
 
     </Grid>
 </UserControl>

@@ -10,6 +10,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/SidePanelTheme.xaml"/>
                 <ResourceDictionary Source="Theme/SearchBarTheme.xaml"/>
+                <ResourceDictionary Source="Theme/SessionCardTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">

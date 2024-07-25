@@ -9,8 +9,8 @@
         Height="600" Width="920"
         ResizeMode="NoResize"
         Background="Transparent"
-        AllowsTransparency="False"
-        WindowStyle="SingleBorderWindow">
+        WindowStyle="None"
+        AllowsTransparency="True">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
@@ -19,7 +19,7 @@
     <Border Background="#272537" CornerRadius="10">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="125"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -27,41 +27,38 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Rectangle Grid.ColumnSpan="1"
-                       Grid.RowSpan="2">
-                <Rectangle.Fill>
-                    <SolidColorBrush Color="#191824"/>
-                </Rectangle.Fill>
-            </Rectangle>
+            <Grid Background="#1b1a26">
+                <TextBlock Text="SpaceApp"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Foreground="White"
+                        FontSize="22"/>
+            </Grid>
 
-            <TextBlock Text="SpaceApp"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Left"
-                       Margin="20, 0, 0, 0"
-                       Foreground="White"
-                       FontSize="22"/>
 
-            <StackPanel Grid.Row="1">
+            <StackPanel Grid.Row="1" Background="#1b1a26">
                 <RadioButton Content="Home"
-                             Height="50"
-                             Foreground="White"
-                             FontSize="14"
-                             Style="{StaticResource SidePanelTheme}"
-                             IsChecked="True"
-                             Command="{Binding HomeViewCommand}"/>
+                                    Height="50"
+                                    Foreground="White"
+                                    FontSize="14"
+                                    Style="{StaticResource SidePanelTheme}"
+                                    IsChecked="True"
+                                    Command="{Binding HomeViewCommand}"/>
                 <RadioButton Content="Events"
-                             Height="50"
-                             Foreground="White"
-                             FontSize="14"
-                             Style="{StaticResource SidePanelTheme}"
-                             Command="{Binding EventsViewCommand}"/>
+                                    Height="50"
+                                    Foreground="White"
+                                    FontSize="14"
+                                    Style="{StaticResource SidePanelTheme}"
+                                    Command="{Binding EventsViewCommand}"/>
                 <RadioButton Content="Sessions"
-                             Height="50"
-                             Foreground="White"
-                             FontSize="14"
-                             Style="{StaticResource SidePanelTheme}"
-                             Command="{Binding SessionsViewCommand }"/>
+                                    Height="50"
+                                    Foreground="White"
+                                    FontSize="14"
+                                    Style="{StaticResource SidePanelTheme}"
+                                    Command="{Binding SessionsViewCommand }"/>
             </StackPanel>
+
+
 
             <TextBox Width="250"
                      Height="40"
@@ -76,6 +73,7 @@
                             Margin="10"
                             Content="{Binding CurrentView}"/>
 
+            <!-- Cool comment 
             <Grid Name="BackgroundGrid"
                   Grid.Row="0"
                   Grid.ColumnSpan="2"
@@ -84,10 +82,10 @@
                 <Grid.Background>
                     <ImageBrush ImageSource="{Binding BackgroundImageSource}"
                            Stretch="Fill"
-                                Opacity="0.8"/>
+                            Opacity="0.8"/>
                 </Grid.Background>
-
             </Grid>
+            -->
         </Grid>
     </Border>
 </Window>

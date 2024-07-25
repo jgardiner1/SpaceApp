@@ -23,3 +23,4 @@ C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\MVVM\V
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\MVVM\View\SessionsView.g.cs
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\MVVM\View\EventsView.baml
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\MVVM\View\SessionsView.baml
+C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\Theme\SessionCardTheme.baml

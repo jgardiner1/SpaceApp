@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\App.xaml
-6626647694
+7187512652
 
-15-1204207358
+16-1311547228
 13-1310406943
-MainWindow.xaml;MVVM\View\EventsView.xaml;MVVM\View\HomeView.xaml;MVVM\View\SessionsView.xaml;Theme\SearchBarTheme.xaml;Theme\SidePanelTheme.xaml;
+MainWindow.xaml;MVVM\View\EventsView.xaml;MVVM\View\HomeView.xaml;MVVM\View\SessionsView.xaml;Theme\SearchBarTheme.xaml;Theme\SessionCardTheme.xaml;Theme\SidePanelTheme.xaml;
 
-False
+True
 
