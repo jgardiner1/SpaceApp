@@ -8,30 +8,39 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="75"/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Text="SESSIONS"
-                   Foreground="white"
-                   FontSize="32"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Left"
-                   Margin="20, 0, 0, 0"/>
 
-        <ListView Grid.Row="1" ItemsSource="{Binding Sessions}"
-                  Background="Transparent"
-                  BorderThickness="0"
-                  ItemContainerStyle="{StaticResource SessionCard}">
-            <ListView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <WrapPanel Orientation="Horizontal"/>
-                </ItemsPanelTemplate>
-            </ListView.ItemsPanel>
-        </ListView>
-
+        <ScrollViewer Grid.Row="1" Background="Transparent" VerticalScrollBarVisibility="Hidden">
+            <StackPanel Margin="15">
+                <ItemsControl x:Name="UserSessionView" ItemsSource="{Binding Sessions}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border CornerRadius="10" Background="#FF100A0F" Opacity="0.7" Margin="5">
+                                <StackPanel Margin="5" Height="275" Width="225" Background="#FF100A0F" Opacity="0.7">
+                                    <Border Margin="5" Height="150" CornerRadius="10">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="{Binding ImageSource}"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <TextBlock Text="{Binding SessionName}" Foreground="White" Margin="5, 5, 5, 0"/>
+                                    <TextBlock Text="{Binding DateTime}" Foreground="White" FontSize="10" Margin="5, 0, 0, 0"/>
+                                    <TextBlock Text="Observed: Mars, Jupiter, Saturn" FontSize="10" Foreground="white" Margin="5, 10, 0, 0"/>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </UserControl>

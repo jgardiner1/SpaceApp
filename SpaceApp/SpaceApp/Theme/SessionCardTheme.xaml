@@ -4,7 +4,7 @@
     <Style TargetType="ListViewItem" x:Key="SessionCard">
         <Style.Triggers>
             <Trigger Property="IsSelected" Value="True">
-                <Setter Property="Background" Value="White"/>
+                <Setter Property="Background" Value="LightGray"/>
             </Trigger>
 
             <Trigger Property="IsMouseOver" Value="True">
@@ -12,7 +12,7 @@
             </Trigger>
         </Style.Triggers>
 
-        <Setter Property="Background" Value="#1b1a26"/>
+        <Setter Property="Background" Value="Black"/>
 
         <Setter Property="Template">
             <Setter.Value>
@@ -21,20 +21,12 @@
                             Height="275"
                             Width="250"
                             CornerRadius="5"
-                            Opacity="0.8">
+                            Opacity="0.8"
+                            Margin="10">
                         <Grid>
-                            <StackPanel Orientation="Vertical"
-                                        Margin="0, 0, 0, 0">
-                                <Image Source="{Binding ImageSource}" Height="125" Width="250" Stretch="Fill" Margin="10" RenderOptions.BitmapScalingMode="Fant"/>
-                                <Label Content="{Binding SessionName}"/>
+                            <StackPanel>
+                                <Label Content="{Binding SessionName}" Foreground="White" HorizontalAlignment="Center"/>
                                 <Label Content="{Binding DateTime}"/>
-                                <ListView ItemsSource="{Binding Observables}">
-                                    <ListBox.ItemTemplate>
-                                        <DataTemplate>
-                                            <TextBlock Text="{Binding}" />
-                                        </DataTemplate>
-                                    </ListBox.ItemTemplate>
-                                </ListView>
                             </StackPanel>
                         </Grid>
 

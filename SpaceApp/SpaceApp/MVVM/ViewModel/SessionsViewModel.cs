@@ -45,6 +45,24 @@ namespace SpaceApp.MVVM.ViewModel
                 SkyCondition = "Great",
                 Observables = new string[] { "Jupiter", "Mars", "Moon" }
             });
+            Sessions.Add(new SessionModel
+            {
+                SessionName = "My SkyWatching Session",
+                DateTime = DateTime.Now,
+                Location = "Canvey Island",
+                WeatherCondition = "Clear",
+                SkyCondition = "Great",
+                Observables = new string[] { "Jupiter", "Mars", "Moon" }
+            });
+            Sessions.Add(new SessionModel
+            {
+                SessionName = "My SkyWatching Session",
+                DateTime = DateTime.Now,
+                Location = "Canvey Island",
+                WeatherCondition = "Clear",
+                SkyCondition = "Great",
+                Observables = new string[] { "Jupiter", "Mars", "Moon" }
+            });
         }
     }
 }

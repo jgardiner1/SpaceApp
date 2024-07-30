@@ -149,5 +149,8 @@
   <ItemGroup>
     <Resource Include="Images\Amateur Space Image.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MVVM\View\Amateur Space Image.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
