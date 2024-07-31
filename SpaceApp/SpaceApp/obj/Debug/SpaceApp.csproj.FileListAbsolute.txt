@@ -2,7 +2,6 @@ C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\bin\Debug\SpaceA
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\bin\Debug\SpaceApp.exe
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\bin\Debug\SpaceApp.pdb
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\SpaceApp.csproj.AssemblyReference.cache
-C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\Theme\SidePanelTheme.baml
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\MainWindow.g.cs
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\App.g.cs
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\SpaceApp_MarkupCompile.cache
@@ -15,7 +14,6 @@ C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\SpaceA
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\SpaceApp.csproj.CoreCompileInputs.cache
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\SpaceApp.exe
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\SpaceApp.pdb
-C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\Theme\SearchBarTheme.baml
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\MVVM\View\HomeView.g.cs
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\MVVM\View\HomeView.baml
@@ -23,4 +21,7 @@ C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\MVVM\V
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\MVVM\View\SessionsView.g.cs
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\MVVM\View\EventsView.baml
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\MVVM\View\SessionsView.baml
-C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\Theme\SessionCardTheme.baml
+C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\Themes\SearchBarTheme.baml
+C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\Themes\SessionCardTheme.baml
+C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\Themes\SidePanelTheme.baml
+C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\Themes\SessionAddButtonTheme.baml

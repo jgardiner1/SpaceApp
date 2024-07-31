@@ -81,15 +81,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Theme\SearchBarTheme.xaml">
+    <Page Include="Themes\SearchBarTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Theme\SessionCardTheme.xaml">
+    <Page Include="Themes\SessionAddButtonTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\SessionCardTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Theme\SidePanelTheme.xaml">
+    <Page Include="Themes\SidePanelTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fonts\" />
+    <Folder Include="MVVM\Utilities\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\StarryNightSkyBG.png" />
@@ -148,9 +153,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Amateur Space Image.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="MVVM\View\Amateur Space Image.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

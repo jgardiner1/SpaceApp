@@ -6,41 +6,54 @@
              xmlns:local="clr-namespace:SpaceApp.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
     <Grid Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
+            <Button Grid.Row="0" Height="50" Style="{StaticResource SessionAddButton}">
+                <TextBlock Text="Add New Session" Foreground="white" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
 
-        <ScrollViewer Grid.Row="1" Background="Transparent" VerticalScrollBarVisibility="Hidden">
-            <StackPanel Margin="15">
-                <ItemsControl x:Name="UserSessionView" ItemsSource="{Binding Sessions}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Border CornerRadius="10" Background="#FF100A0F" Opacity="0.7" Margin="5">
-                                <StackPanel Margin="5" Height="275" Width="225" Background="#FF100A0F" Opacity="0.7">
-                                    <Border Margin="5" Height="150" CornerRadius="10">
-                                        <Border.Background>
-                                            <ImageBrush ImageSource="{Binding ImageSource}"/>
-                                        </Border.Background>
-                                    </Border>
-                                    <TextBlock Text="{Binding SessionName}" Foreground="White" Margin="5, 5, 5, 0"/>
-                                    <TextBlock Text="{Binding DateTime}" Foreground="White" FontSize="10" Margin="5, 0, 0, 0"/>
-                                    <TextBlock Text="Observed: Mars, Jupiter, Saturn" FontSize="10" Foreground="white" Margin="5, 10, 0, 0"/>
-                                </StackPanel>
-                            </Border>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapPanel/>
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                </ItemsControl>
-            </StackPanel>
+            <ScrollViewer Grid.Row="1" Background="Transparent" VerticalScrollBarVisibility="Hidden">
+            <ItemsControl x:Name="UserSessionView" ItemsSource="{Binding Sessions}"
+                              PreviewMouseLeftButtonDown="OnPreviewMouseLeftButtonDown"
+                              PreviewMouseMove="OnPreviewMouseMove"
+                              Grid.Row="1"
+                              >
+                <ItemsControl.ItemTemplate>
+
+                    <!-- Card Layout here -->
+                    <DataTemplate>
+                        <Border Style="{StaticResource CardBorderStyle}"
+                                    AllowDrop="True"
+                                    Drop="OnDrop"
+                                    DragEnter="OnDragEnter"
+                                    DragLeave="OnDragLeave">
+                            <StackPanel Style="{StaticResource CardContentStyle}">
+                                <Border Style="{StaticResource ImageBorderStyle}">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="{Binding ImageSource}"/>
+                                    </Border.Background>
+                                </Border>
+                                <TextBlock Text="{Binding SessionName}" Style="{StaticResource SessionNameStyle}"/>
+                                <TextBlock Text="{Binding DateTime}" Style="{StaticResource DateTimeStyle}"/>
+                                <TextBlock Text="Observed: Mars, Jupiter, Saturn" FontSize="10" Style="{StaticResource ObservedTextStyle}"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
         </ScrollViewer>
     </Grid>
 </UserControl>

@@ -8,9 +8,11 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Theme/SidePanelTheme.xaml"/>
-                <ResourceDictionary Source="Theme/SearchBarTheme.xaml"/>
-                <ResourceDictionary Source="Theme/SessionCardTheme.xaml"/>
+                <ResourceDictionary Source="Themes/SidePanelTheme.xaml"/>
+                <ResourceDictionary Source="Themes/SearchBarTheme.xaml"/>
+                <ResourceDictionary Source="Themes/SessionCardTheme.xaml"/>
+                <ResourceDictionary Source="Themes/SessionAddButtonTheme.xaml"/>
+
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">

@@ -7,10 +7,9 @@
         xmlns:local="clr-namespace:SpaceApp"
         mc:Ignorable="d"
         Height="600" Width="920"
-        ResizeMode="NoResize"
+        ResizeMode="CanResizeWithGrip"
         Background="Transparent"
-        WindowStyle="None"
-        AllowsTransparency="True">
+        WindowStyle="SingleBorderWindow">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
@@ -34,7 +33,6 @@
                         Foreground="White"
                         FontSize="22"/>
             </Grid>
-
 
             <StackPanel Grid.Row="1" Background="#1b1a26">
                 <RadioButton Content="Home"
