@@ -21,6 +21,7 @@ namespace SpaceApp.MVVM.ViewModel
             {
                 SessionName = "SkyWatching Session 1",
                 DateTime = DateTime.Now,
+                SessionLength = 4,
                 Location = "Canvey Island",
                 WeatherCondition = "Clear",
                 SkyCondition = "Great",
@@ -31,6 +32,7 @@ namespace SpaceApp.MVVM.ViewModel
             {
                 SessionName = "SkyWatching Session 2",
                 DateTime = DateTime.Now,
+                SessionLength = 3,
                 Location = "Basildon",
                 WeatherCondition = "Clear",
                 SkyCondition = "Great",
@@ -41,6 +43,7 @@ namespace SpaceApp.MVVM.ViewModel
             {
                 SessionName = "SkyWatching Session 3",
                 DateTime = DateTime.Now,
+                SessionLength = 5,
                 Location = "Scotland",
                 WeatherCondition = "Clear",
                 SkyCondition = "Great",
@@ -51,6 +54,7 @@ namespace SpaceApp.MVVM.ViewModel
             {
                 SessionName = "SkyWatching Session 4",
                 DateTime = DateTime.Now,
+                SessionLength = 1,
                 Location = "France",
                 WeatherCondition = "Cloudy",
                 SkyCondition = "Great",
@@ -60,6 +64,7 @@ namespace SpaceApp.MVVM.ViewModel
             {
                 SessionName = "SkyWatching Session 5",
                 DateTime = DateTime.Now,
+                SessionLength = 7,
                 Location = "Belgium",
                 WeatherCondition = "Foggy",
                 SkyCondition = "Great",

@@ -6,7 +6,7 @@
         xmlns:viewModel="clr-namespace:SpaceApp.MVVM.ViewModel"
         xmlns:local="clr-namespace:SpaceApp"
         mc:Ignorable="d"
-        Height="600" Width="920"
+        Height="600" Width="940"
         ResizeMode="CanResizeWithGrip"
         Background="Transparent"
         WindowStyle="SingleBorderWindow">
@@ -70,20 +70,6 @@
                             Grid.Column="1"
                             Margin="10"
                             Content="{Binding CurrentView}"/>
-
-            <!-- Cool comment 
-            <Grid Name="BackgroundGrid"
-                  Grid.Row="0"
-                  Grid.ColumnSpan="2"
-                  Grid.RowSpan="2"
-                  IsHitTestVisible="False">
-                <Grid.Background>
-                    <ImageBrush ImageSource="{Binding BackgroundImageSource}"
-                           Stretch="Fill"
-                            Opacity="0.8"/>
-                </Grid.Background>
-            </Grid>
-            -->
         </Grid>
     </Border>
 </Window>

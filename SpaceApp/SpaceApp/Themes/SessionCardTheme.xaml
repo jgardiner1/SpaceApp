@@ -41,6 +41,11 @@
         <Setter Property="FontSize" Value="10"/>
     </Style>
 
+    <!-- SessionLength Style -->
+    <Style x:Key="SessionLengthStyle" TargetType="TextBlock" BasedOn="{StaticResource CardTextBlockStyle}">
+        <Setter Property="FontSize" Value="10"/>
+    </Style>
+
     <!-- Observed Text Style -->
     <Style x:Key="ObservedTextStyle" TargetType="TextBlock" BasedOn="{StaticResource CardTextBlockStyle}">
         <Setter Property="FontSize" Value="10"/>

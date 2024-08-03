@@ -16,7 +16,8 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-            <Button Grid.Row="0" Height="50" Style="{StaticResource SessionAddButton}">
+            <Button Grid.Row="0" Height="50" Style="{StaticResource SessionAddButton}"
+                    Click="Button_Click">
                 <TextBlock Text="Add New Session" Foreground="white" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
 
@@ -43,6 +44,7 @@
                                 </Border>
                                 <TextBlock Text="{Binding SessionName}" Style="{StaticResource SessionNameStyle}"/>
                                 <TextBlock Text="{Binding DateTime}" Style="{StaticResource DateTimeStyle}"/>
+                                <TextBlock Text="{Binding SessionLength}" Style="{StaticResource SessionLengthStyle}"/>
                                 <TextBlock Text="Observed: Mars, Jupiter, Saturn" FontSize="10" Style="{StaticResource ObservedTextStyle}"/>
                             </StackPanel>
                         </Border>

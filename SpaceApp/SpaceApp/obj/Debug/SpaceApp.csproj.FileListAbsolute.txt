@@ -25,3 +25,6 @@ C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\Themes
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\Themes\SessionCardTheme.baml
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\Themes\SidePanelTheme.baml
 C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\Themes\SessionAddButtonTheme.baml
+C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\Themes\FormEntryTextbox.baml
+C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\MVVM\View\SessionDataEntryView.g.cs
+C:\Users\james\Documents\Projects\C#\SpaceApp\SpaceApp\SpaceApp\obj\Debug\MVVM\View\SessionDataEntryView.baml

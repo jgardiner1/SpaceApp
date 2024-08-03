@@ -12,6 +12,7 @@
                 <ResourceDictionary Source="Themes/SearchBarTheme.xaml"/>
                 <ResourceDictionary Source="Themes/SessionCardTheme.xaml"/>
                 <ResourceDictionary Source="Themes/SessionAddButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes/FormEntryTextbox.xaml"/>
 
             </ResourceDictionary.MergedDictionaries>
 

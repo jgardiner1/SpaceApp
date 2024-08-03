@@ -99,5 +99,13 @@ namespace SpaceApp.MVVM.View
             }
             return null;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SessionDataEntryView window = new SessionDataEntryView();
+            window.Owner = Window.GetWindow(this);
+            window.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            window.Show();
+        }
     }
 }

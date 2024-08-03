@@ -11,6 +11,7 @@ namespace SpaceApp.MVVM.Model
     {
         public string SessionName { get; set; }
         public DateTime DateTime { get; set; }
+        public int SessionLength { get; set;}
         public string Location { get; set; }
         public string WeatherCondition { get; set; }
         public string SkyCondition { get; set; }
