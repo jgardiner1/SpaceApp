@@ -44,8 +44,8 @@
                                 </Border>
                                 <TextBlock Text="{Binding SessionName}" Style="{StaticResource SessionNameStyle}"/>
                                 <TextBlock Text="{Binding DateTime}" Style="{StaticResource DateTimeStyle}"/>
-                                <TextBlock Text="{Binding SessionLength}" Style="{StaticResource SessionLengthStyle}"/>
-                                <TextBlock Text="Observed: Mars, Jupiter, Saturn" FontSize="10" Style="{StaticResource ObservedTextStyle}"/>
+                                <TextBlock Text="{Binding SessionLengthJoined}" Style="{StaticResource SessionLengthStyle}"/>
+                                <TextBlock Text="{Binding ObservablesJoined}" FontSize="10" Style="{StaticResource ObservedTextStyle}"/>
                             </StackPanel>
                         </Border>
                     </DataTemplate>

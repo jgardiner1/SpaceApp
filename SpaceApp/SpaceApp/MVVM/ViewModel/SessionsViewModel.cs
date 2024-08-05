@@ -21,7 +21,6 @@ namespace SpaceApp.MVVM.ViewModel
             {
                 SessionName = "SkyWatching Session 1",
                 DateTime = DateTime.Now,
-                SessionLength = 4,
                 Location = "Canvey Island",
                 WeatherCondition = "Clear",
                 SkyCondition = "Great",
@@ -58,7 +57,6 @@ namespace SpaceApp.MVVM.ViewModel
                 Location = "France",
                 WeatherCondition = "Cloudy",
                 SkyCondition = "Great",
-                Observables = new string[] { "Nothing" }
             });
             Sessions.Add(new SessionModel
             {
