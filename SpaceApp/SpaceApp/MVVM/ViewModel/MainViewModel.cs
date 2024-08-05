@@ -62,10 +62,11 @@ namespace SpaceApp.MVVM.ViewModel
                 BackgroundImageSource = "pack://application:,,,/Images/10893418.png";
             });
 
-            EventsViewCommand = new RelayCommand(o =>
+            EventsViewCommand = new RelayCommand(async o =>
             {
                 CurrentView = EventsVM;
                 BackgroundImageSource = "pack://application:,,,/Images/10893418.png";
+                await EventsVM.InitialiseAsync();
             });
         }
     }
