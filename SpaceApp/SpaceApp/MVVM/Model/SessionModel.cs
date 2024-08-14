@@ -10,7 +10,7 @@ namespace SpaceApp.MVVM.Model
     public class SessionModel
     {
         public string Name { get; set; }
-        public DateTime DateTime { get; set; }
+        public DateOnly Date { get; set; }
         public int ?Length { get; set;}
         public string Location { get; set; }
         public string WeatherCondition { get; set; }

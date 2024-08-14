@@ -7,7 +7,8 @@
         xmlns:viewModel="clr-namespace:SpaceApp.MVVM.ViewModel"
         mc:Ignorable="d"
         Title="SessionDataEntryView" Height="450" Width="400"
-        Background="#272537">
+        Background="#272537"
+        ResizeMode="NoResize">
 
     <Window.DataContext>
         <viewModel:SessionDataEntryViewModel/>
@@ -45,15 +46,31 @@
         <TextBox Grid.Row="2" 
                  Height="40" Width="400"
                  Margin="10"
-                 HorizontalAlignment="Left"
-                 VerticalAlignment="Center"
+
                  Tag="Location"
                  Text="{Binding SessionLocation, UpdateSourceTrigger=PropertyChanged}"
                  Style="{StaticResource FormEntryTheme}">
 
         </TextBox>
 
-        <TextBox Grid.Row="3" 
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75"/>
+                <ColumnDefinition Width="75"/>
+                <ColumnDefinition Width="125"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Column="0" Margin="10" Tag="DD" Text="{Binding SessionDay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource FormEntryTheme}"/>
+            <TextBox Grid.Column="1" Margin="10" Tag="MM" Text="{Binding SessionMonth, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource FormEntryTheme}"/>
+            <TextBox Grid.Column="2" Margin="10" Tag="YYYY" Text="{Binding SessionYear, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource FormEntryTheme}"/>
+            <Button Grid.Column="3" Margin="10" FontWeight="SemiBold" FontSize="16"
+                    Command="{Binding AddDateOnlyCommand}">
+                <TextBlock Text="TODAY"/>
+            </Button>
+        </Grid>
+
+        <TextBox Grid.Row="4" 
                  Height="40" Width="400"
                  Margin="10"
                  HorizontalAlignment="Left"
@@ -64,7 +81,7 @@
 
         </TextBox>
 
-        <TextBox Grid.Row="4" 
+        <TextBox Grid.Row="5" 
                  Height="40" Width="400"
                  Margin="10"
                  HorizontalAlignment="Left"

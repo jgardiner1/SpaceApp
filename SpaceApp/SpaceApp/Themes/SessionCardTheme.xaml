@@ -37,7 +37,7 @@
     </Style>
 
     <!-- DateTime Style -->
-    <Style x:Key="DateTimeStyle" TargetType="TextBlock" BasedOn="{StaticResource CardTextBlockStyle}">
+    <Style x:Key="DateStyle" TargetType="TextBlock" BasedOn="{StaticResource CardTextBlockStyle}">
         <Setter Property="FontSize" Value="10"/>
     </Style>
 

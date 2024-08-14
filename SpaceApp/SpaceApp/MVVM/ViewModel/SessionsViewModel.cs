@@ -1,14 +1,9 @@
 ﻿using SpaceApp.Core;
 using SpaceApp.MVVM.Model;
-using SpaceApp.MVVM.Utilities;
 using SpaceApp.MVVM.View;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
@@ -28,7 +23,7 @@ namespace SpaceApp.MVVM.ViewModel
             Sessions.Add(new SessionModel
             {
                 Name = "SkyWatching Session 1",
-                DateTime = DateTime.Now,
+                Date = DateOnly.FromDateTime(DateTime.Now),
                 Location = "Canvey Island",
                 WeatherCondition = "Clear",
                 SkyCondition = "Great",
@@ -38,7 +33,7 @@ namespace SpaceApp.MVVM.ViewModel
             Sessions.Add(new SessionModel
             {
                 Name = "SkyWatching Session 2",
-                DateTime = DateTime.Now,
+                Date = DateOnly.FromDateTime(DateTime.Now),
                 Length = 3,
                 Location = "Basildon",
                 WeatherCondition = "Clear",
@@ -49,7 +44,7 @@ namespace SpaceApp.MVVM.ViewModel
             Sessions.Add(new SessionModel
             {
                 Name = "SkyWatching Session 3",
-                DateTime = DateTime.Now,
+                Date = DateOnly.FromDateTime(DateTime.Now),
                 Length = 5,
                 Location = "Scotland",
                 WeatherCondition = "Clear",
@@ -60,7 +55,7 @@ namespace SpaceApp.MVVM.ViewModel
             Sessions.Add(new SessionModel
             {
                 Name = "SkyWatching Session 4",
-                DateTime = DateTime.Now,
+                Date = DateOnly.FromDateTime(DateTime.Now),
                 Length = 1,
                 Location = "France",
                 WeatherCondition = "Cloudy",
@@ -70,7 +65,7 @@ namespace SpaceApp.MVVM.ViewModel
             Sessions.Add(new SessionModel
             {
                 Name = "SkyWatching Session 5",
-                DateTime = DateTime.Now,
+                Date = DateOnly.FromDateTime(DateTime.Now),
                 Length = 7,
                 Location = "Belgium",
                 WeatherCondition = "Foggy",
