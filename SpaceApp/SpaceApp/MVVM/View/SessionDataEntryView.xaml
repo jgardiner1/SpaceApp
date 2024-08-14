@@ -4,10 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SpaceApp.MVVM.View"
+        xmlns:viewModel="clr-namespace:SpaceApp.MVVM.ViewModel"
         mc:Ignorable="d"
         Title="SessionDataEntryView" Height="450" Width="400"
         Background="#272537">
 
+    <Window.DataContext>
+        <viewModel:SessionDataEntryViewModel/>
+    </Window.DataContext>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -25,13 +30,14 @@
         <Border Background="#1b1a26">
             <TextBlock Text="Session Info" Foreground="White" FontSize="38" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </Border>
-        
+
         <TextBox Grid.Row="1" 
                  Height="40" Width="400"
                  Margin="10"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Center"
                  Tag="Session Name"
+                 Text="{Binding SessionName, UpdateSourceTrigger=PropertyChanged}"
                  Style="{StaticResource FormEntryTheme}">
 
         </TextBox>
@@ -42,6 +48,7 @@
                  HorizontalAlignment="Left"
                  VerticalAlignment="Center"
                  Tag="Location"
+                 Text="{Binding SessionLocation, UpdateSourceTrigger=PropertyChanged}"
                  Style="{StaticResource FormEntryTheme}">
 
         </TextBox>
@@ -52,6 +59,7 @@
                  HorizontalAlignment="Left"
                  VerticalAlignment="Center"
                  Tag="Sky Condition"
+                 Text="{Binding SessionSkyCondition, UpdateSourceTrigger=PropertyChanged}"
                  Style="{StaticResource FormEntryTheme}">
 
         </TextBox>
@@ -62,8 +70,14 @@
                  HorizontalAlignment="Left"
                  VerticalAlignment="Center"
                  Tag="Weather Condition"
+                 Text="{Binding SessionWeatherCondition, UpdateSourceTrigger=PropertyChanged}"
                  Style="{StaticResource FormEntryTheme}">
 
         </TextBox>
+
+        <Button Grid.Row="6" Margin="20, 10, 20, 10"
+                Command="{Binding AddSessionCommand}">
+            <TextBlock Text="ADD" FontWeight="SemiBold" FontSize="20"/>
+        </Button>
     </Grid>
 </Window>

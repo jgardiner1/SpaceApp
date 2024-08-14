@@ -171,6 +171,7 @@
     <Compile Include="MVVM\ViewModel\EventsViewModel.cs" />
     <Compile Include="MVVM\ViewModel\HomeViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\SessionDataEntryViewModel.cs" />
     <Compile Include="MVVM\ViewModel\SessionsViewModel.cs" />
     <Compile Include="MVVM\View\EventsView.xaml.cs">
       <DependentUpon>EventsView.xaml</DependentUpon>

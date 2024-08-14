@@ -18,6 +18,18 @@ namespace SpaceApp.MVVM.Model
         public string[] Observables { get; set; }
         public string ImageSource { get; set; }
 
+/*        public SessionModel(string sessionName, DateTime dateTime, int? sessionLength, string location, string weatherCondition, string skyCondition, string[] observables, string imageSource)
+        {
+            this.SessionName = sessionName;
+            this.DateTime = dateTime;
+            this.SessionLength = sessionLength;
+            this.Location = location;
+            this.WeatherCondition = weatherCondition;
+            this.SkyCondition = skyCondition;
+            this.Observables = observables;
+            this.ImageSource = imageSource;
+        }*/
+
         public string ObservablesJoined
         {
             get { return Observables == null ? "Observed: Nothing" : "Observed: " + string.Join(", ", Observables); }
