@@ -1,19 +1,16 @@
 ﻿using SpaceApp.Core;
 using SpaceApp.MVVM.Model;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Data;
 using System.Windows.Input;
 
 namespace SpaceApp.MVVM.ViewModel
 {
     public class SessionDataEntryViewModel : INotifyPropertyChanged
     {
+        public event Action<SessionModel> SessionCreated;
+
         private string _sessionName;
         private string _sessionLocation;
         private string _sessionSkyCondition;
@@ -73,6 +70,19 @@ namespace SpaceApp.MVVM.ViewModel
                 $"Location: {SessionLocation}\n" +
                 $"Sky Condition: {SessionSkyCondition}\n" +
                 $"Weather Condition: {SessionWeatherCondition}");
+
+            var session = (new SessionModel
+            {
+                Name = SessionName,
+                DateTime = DateTime.Now,
+                Location = SessionLocation,
+                WeatherCondition = this.SessionWeatherCondition,
+                SkyCondition = SessionSkyCondition,
+                Observables = new string[] { "Jupiter" },
+                ImageSource = ""
+            }) ;
+
+            SessionCreated?.Invoke(session);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

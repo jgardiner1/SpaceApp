@@ -1,26 +1,33 @@
-﻿using SpaceApp.MVVM.Model;
+﻿using SpaceApp.Core;
+using SpaceApp.MVVM.Model;
 using SpaceApp.MVVM.Utilities;
+using SpaceApp.MVVM.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
 
 namespace SpaceApp.MVVM.ViewModel
 {
-    internal class SessionsViewModel
+    public class SessionsViewModel : INotifyPropertyChanged
     {
 
-        public ObservableCollection<SessionModel> Sessions { get; set; }
+        public ObservableCollection<SessionModel> Sessions { get; set; } = new ObservableCollection<SessionModel>();
+
+        public ICommand OpenPopupCommand { get; }
 
         public SessionsViewModel()
         {
-            Sessions = new ObservableCollection<SessionModel>();
+            OpenPopupCommand = new RelayCommand(OpenPopup);
 
             Sessions.Add(new SessionModel
             {
-                SessionName = "SkyWatching Session 1",
+                Name = "SkyWatching Session 1",
                 DateTime = DateTime.Now,
                 Location = "Canvey Island",
                 WeatherCondition = "Clear",
@@ -30,9 +37,9 @@ namespace SpaceApp.MVVM.ViewModel
             }) ;
             Sessions.Add(new SessionModel
             {
-                SessionName = "SkyWatching Session 2",
+                Name = "SkyWatching Session 2",
                 DateTime = DateTime.Now,
-                SessionLength = 3,
+                Length = 3,
                 Location = "Basildon",
                 WeatherCondition = "Clear",
                 SkyCondition = "Great",
@@ -41,9 +48,9 @@ namespace SpaceApp.MVVM.ViewModel
             });
             Sessions.Add(new SessionModel
             {
-                SessionName = "SkyWatching Session 3",
+                Name = "SkyWatching Session 3",
                 DateTime = DateTime.Now,
-                SessionLength = 5,
+                Length = 5,
                 Location = "Scotland",
                 WeatherCondition = "Clear",
                 SkyCondition = "Great",
@@ -52,23 +59,49 @@ namespace SpaceApp.MVVM.ViewModel
             });
             Sessions.Add(new SessionModel
             {
-                SessionName = "SkyWatching Session 4",
+                Name = "SkyWatching Session 4",
                 DateTime = DateTime.Now,
-                SessionLength = 1,
+                Length = 1,
                 Location = "France",
                 WeatherCondition = "Cloudy",
                 SkyCondition = "Great",
+                ImageSource = ""
             });
             Sessions.Add(new SessionModel
             {
-                SessionName = "SkyWatching Session 5",
+                Name = "SkyWatching Session 5",
                 DateTime = DateTime.Now,
-                SessionLength = 7,
+                Length = 7,
                 Location = "Belgium",
                 WeatherCondition = "Foggy",
                 SkyCondition = "Great",
+                ImageSource = "",
                 Observables = new string[] { "Jupiter", "Mars", "Moon" }
             });
+        }
+
+        private void OnSessionCreated(SessionModel session)
+        {
+            Sessions.Add(session);
+            Console.WriteLine("Added session!!!");
+        }
+
+        private void OpenPopup(object parameter)
+        {
+            var sessionDataEntryViewModel = new SessionDataEntryViewModel();
+
+            sessionDataEntryViewModel.SessionCreated += OnSessionCreated;
+
+            SessionDataEntryView window = new SessionDataEntryView(sessionDataEntryViewModel);
+            //window.Owner = Window.GetWindow(this);
+            window.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            window.Show();
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

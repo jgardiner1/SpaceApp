@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpaceApp.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,11 @@ namespace SpaceApp.MVVM.View
     /// </summary>
     public partial class SessionDataEntryView : Window
     {
-        public SessionDataEntryView()
+        public SessionDataEntryView(SessionDataEntryViewModel viewModel)
         {
             InitializeComponent();
+
+            DataContext = viewModel;
         }
     }
 }
