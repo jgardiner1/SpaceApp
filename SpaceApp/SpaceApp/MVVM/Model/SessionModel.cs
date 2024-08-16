@@ -18,6 +18,22 @@ namespace SpaceApp.MVVM.Model
         public string[] Observables { get; set; }
         public string ImageSource { get; set; }
 
+        private Dictionary<int, string> _months = new Dictionary<int, string>()
+        {
+            {1, "Jan" },
+            {2, "Feb" },
+            {3, "Mar" },
+            {4, "Apr" },
+            {5, "May" },
+            {6, "Jun" },
+            {7, "Jul" },
+            {8, "Aug" },
+            {9, "Sep" },
+            {10, "Oct" },
+            {11, "Nov" },
+            {12, "Dec" },
+        };
+
         public string ObservablesJoined
         {
             get { return Observables == null ? "Observed: Nothing" : "Observed: " + string.Join(", ", Observables); }
@@ -28,5 +44,9 @@ namespace SpaceApp.MVVM.Model
             get { return Length == null ? null: Length.ToString() + " hours";  }
         }
 
+        public string DateFormatted
+        {
+            get { return $"{Date.Day} {_months[Date.Month]}, {Date.Year}"; }
+        }
     }
 }

@@ -43,7 +43,7 @@
                                     </Border.Background>
                                 </Border>
                                 <TextBlock Text="{Binding Name}" Style="{StaticResource SessionNameStyle}"/>
-                                <TextBlock Text="{Binding Date}" Style="{StaticResource DateStyle}"/>
+                                <TextBlock Text="{Binding DateFormatted}" Style="{StaticResource DateStyle}"/>
                                 <TextBlock Text="{Binding LengthJoined}" Style="{StaticResource SessionLengthStyle}"/>
                                 <TextBlock Text="{Binding ObservablesJoined}" FontSize="10" Style="{StaticResource ObservedTextStyle}"/>
                             </StackPanel>

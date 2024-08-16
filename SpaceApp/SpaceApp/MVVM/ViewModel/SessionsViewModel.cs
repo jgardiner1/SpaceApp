@@ -88,7 +88,11 @@ namespace SpaceApp.MVVM.ViewModel
             sessionDataEntryViewModel.SessionCreated += OnSessionCreated;
 
             SessionDataEntryView window = new SessionDataEntryView(sessionDataEntryViewModel);
-            //window.Owner = Window.GetWindow(this);
+            if (parameter is Window ownerWindow)
+            {
+                window.Owner = ownerWindow;
+            }
+
             window.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             window.Show();
         }

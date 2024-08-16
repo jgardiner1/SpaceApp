@@ -15,7 +15,8 @@ namespace SpaceApp.MVVM.ViewModel
         private string _sessionLocation;
         private string _sessionSkyCondition;
         private string _sessionWeatherCondition;
-        private DateOnly _sessionDate;
+        private DateTime? _sessionDateTime;
+        private DateOnly _sessionDateOnly;
         private int? _sessionDay;
         private int? _sessionMonth;
         private int? _sessionYear;
@@ -90,13 +91,48 @@ namespace SpaceApp.MVVM.ViewModel
             }
         }
         
-        public DateOnly SessionDate
+        public DateOnly SessionDateOnly
         {
-            get { return _sessionDate; }
+            get { return _sessionDateOnly; }
             set
             {
-                _sessionDate = value;
-                OnPropertyChanged();
+                if (_sessionDateOnly != value)
+                {
+                    _sessionDateOnly = value;
+
+                    _sessionDay = value.Day;
+                    _sessionMonth = value.Month;
+                    _sessionYear = value.Year;
+                    OnPropertyChanged();
+
+                }
+            }
+        }
+
+        public DateTime? SessionDateTime
+        {
+            get { return _sessionDateTime; }
+
+            set
+            {
+                if (_sessionDateTime != value)
+                {
+                    _sessionDateTime = value;
+
+                    _sessionDateOnly = _sessionDateTime.HasValue
+                        ? DateOnly.FromDateTime(_sessionDateTime.Value)
+                        : DateOnly.FromDateTime(DateTime.Today);
+
+                    _sessionDay = _sessionDateOnly.Day;
+                    _sessionMonth = _sessionDateOnly.Month;
+                    _sessionYear = _sessionDateOnly.Year;
+
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(SessionDateOnly));
+                    OnPropertyChanged(nameof(SessionDay));
+                    OnPropertyChanged(nameof(SessionMonth));
+                    OnPropertyChanged(nameof(SessionYear));
+                }
             }
         }
 
