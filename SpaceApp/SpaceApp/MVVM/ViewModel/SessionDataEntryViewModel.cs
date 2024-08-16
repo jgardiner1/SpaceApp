@@ -1,7 +1,9 @@
 ﻿using SpaceApp.Core;
 using SpaceApp.MVVM.Model;
 using System;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
@@ -20,6 +22,19 @@ namespace SpaceApp.MVVM.ViewModel
         private int? _sessionDay;
         private int? _sessionMonth;
         private int? _sessionYear;
+
+        private string _currentWord;
+
+        public string CurrentWord
+        {
+            get { return _currentWord; }
+            set { 
+                _currentWord = value;
+                OnPropertyChanged();
+                }
+        }
+
+        public ObservableCollection<WordItem> Words { get; set; } = new ObservableCollection<WordItem>();
 
         public string SessionName
         {
@@ -135,14 +150,17 @@ namespace SpaceApp.MVVM.ViewModel
                 }
             }
         }
-
         public ICommand AddSessionCommand { get; }
         public ICommand AddDateOnlyCommand { get; }
+        public ICommand AddWordCommand { get; }
+        public ICommand RemoveWordCommand { get; }
 
         public SessionDataEntryViewModel()
         {
             AddSessionCommand = new RelayCommand(AddSession);
             AddDateOnlyCommand = new RelayCommand(AddDateOnly);
+            AddWordCommand = new RelayCommand(AddWord);
+            RemoveWordCommand = new RelayCommand(RemoveWord);
         }
 
         private void AddSession(object parameter)
@@ -181,7 +199,29 @@ namespace SpaceApp.MVVM.ViewModel
             SessionMonth = today.Month;
             SessionYear = today.Year;
         }
-        
+
+        private void AddWord(object parameter)
+        {
+            if (!string.IsNullOrWhiteSpace(CurrentWord) && !Words.Any(w => w.Text == CurrentWord))
+            {
+                var wordItem = new WordItem
+                {
+                    Text = CurrentWord,
+                    DeleteCommand = new RelayCommand(RemoveWord)
+                };
+                Words.Add(wordItem);
+                CurrentWord = string.Empty;
+            }
+        }
+
+        private void RemoveWord(object parameter)
+        {
+            if (parameter is WordItem wordItem)
+            {
+                Words.Remove(wordItem);
+            }
+        }
+
 
 
         public event PropertyChangedEventHandler PropertyChanged;

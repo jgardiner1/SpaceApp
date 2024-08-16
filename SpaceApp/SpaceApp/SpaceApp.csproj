@@ -130,6 +130,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\UserControls\TextWithDeleteButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\EventsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -169,6 +173,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MVVM\Model\SessionModel.cs" />
+    <Compile Include="MVVM\Model\WordItem.cs" />
+    <Compile Include="MVVM\UserControls\TextWithDeleteButton.xaml.cs">
+      <DependentUpon>TextWithDeleteButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\Utilities\AstronomyAPI.cs" />
     <Compile Include="MVVM\Utilities\AstronomyAPICredentials.cs" />
     <Compile Include="MVVM\ViewModel\EventsViewModel.cs" />
